@@ -74,11 +74,12 @@ app.post("/alogin",(req,res)=>{
     UserDB.findOne({email:req.body.email}).then((user)=>{
         if(user)
         {
-            if(user.admin)
+            if(user.admin === true)
             {
+                console.log("admin");
                 if(user.password === req.body.password)
                 {
-                    res.render("cdashboard");
+                    res.render("admin_dashboard");
                 }
                 else{
                     res.redirect("/");
