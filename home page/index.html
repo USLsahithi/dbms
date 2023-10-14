@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Bicycle Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>EV Bicycle Management System</h1>
+    </header>
+
+    <section id="login-container">
+        <section id="admin-login" class="login-section">
+            <h2>Admin Login</h2>
+            <form id="admin-login-form">
+                <label for="admin-username">Username:</label>
+                <input type="text" id="admin-username" required>
+                <br>
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="customer-login" class="login-section">
+            <h2>Customer Login</h2>
+            <form id="customer-login-form">
+                <label for="customer-username">Username:</label>
+                <input type="text" id="customer-username" required>
+                <br>
+                <label for="customer-password">Password:</label>
+                <input type="password" id="customer-password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </section>
+    <section id="signup-message">
+        <p>Don't have an account? <a href="#customer-signup" id="open-signup-window">Sign up here</a></p>
+    </section>
+
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Customer Sign Up</h2>
+            <form id="customer-signup-form">
+                <label for="new-customer-name">Name:</label>
+                <input type="text" id="new-customer-name" required>
+                <br>
+                <label for="new-customer-email">Email:</label>
+                <input type="email" id="new-customer-email" required>
+                <br>
+                <label for="new-customer-password">Password:</label>
+                <input type="password" id="new-customer-password" required>
+                <br>
+                <label for="new-customer-address">Address:</label>
+                <input type="text" id="new-customer-address" required>
+                <br>
+                <label for="new-customer-contact">Contact:</label>
+                <input type="text" id="new-customer-contact" required>
+                <br>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

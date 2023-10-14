@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Cycle</title>
+    <style>
+        /* Add CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        form {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="datetime-local"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book a Cycle</h1>
+    <form id="cycle-booking-form">
+        <label for="cycle-id">Cycle ID:</label>
+        <input type="text" id="cycle-id" required>
+        
+        <label for="customer-id">Customer ID:</label>
+        <input type="text" id="customer-id" required>
+
+        <label for="start-time">Start Time:</label>
+        <input type="datetime-local" id="start-time" required>
+
+        <label for="end-time">End Time:</label>
+        <input type="datetime-local" id="end-time" required>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" required>
+
+        <button type="button" id="book-pay-button">Book & Pay</button>
+    </form>
+
+    <script>
+        // JavaScript code to handle button click
+        document.addEventListener("DOMContentLoaded", function () {
+            const bookPayButton = document.getElementById("book-pay-button");
+
+            bookPayButton.addEventListener("click", function () {
+                // Simulate payment done and booking success
+                alert("Payment done! Successfully booked.");
+            });
+        });
+    </script>
+</body>
+</html>
