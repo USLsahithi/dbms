@@ -15,7 +15,7 @@
     <section id="login-container">
         <section id="admin-login" class="login-section">
             <h2>Admin Login</h2>
-            <form id="admin-login-form">
+            <form method="post" action="/alogin" id="admin-login-form">
                 <label for="admin-username">Username:</label>
                 <input type="text" id="admin-username" required>
                 <br>
@@ -28,12 +28,12 @@
 
         <section id="customer-login" class="login-section">
             <h2>Customer Login</h2>
-            <form id="customer-login-form">
-                <label for="customer-username">Username:</label>
-                <input type="text" id="customer-username" required>
+            <form method="post" action="/clogin" id="customer-login-form">
+                <label for="customer-username">Usermail:</label>
+                <input name="email" type="text" id="customer-username" required>
                 <br>
                 <label for="customer-password">Password:</label>
-                <input type="password" id="customer-password" required>
+                <input name="password" type="password" id="customer-password" required>
                 <br>
                 <button type="submit">Login</button>
             </form>
@@ -78,18 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const signupModal = document.getElementById("signup-modal");
     const openSignupButton = document.getElementById("open-signup-window");
     const closeModalButton = document.getElementById("close-modal");
-
-    adminLoginForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        // Simulate admin login logic here (e.g., check credentials and redirect)
-        alert("Admin login submitted");
-    });
-
-    customerLoginForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        // Simulate customer login logic here (e.g., check credentials and redirect)
-        alert("Customer login submitted");
-    });
 
     // Open the sign-up modal when the "Sign up here" link is clicked
     openSignupButton.addEventListener("click", function (e) {

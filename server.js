@@ -52,6 +52,47 @@ app.post("/newUser",(req,res)=>{
     res.redirect(req.get("referer"));
 })
 
+app.post("/clogin",(req,res)=>{
+    UserDB.findOne({email:req.body.email}).then((user)=>{
+        if(user)
+        {
+            if(user.password === req.body.password)
+            {
+                res.render("cdashboard");
+            }
+            else{
+                res.redirect("/");
+            }
+        }
+        else{
+            res.redirect("/");
+        }
+    })
+});
+
+app.post("/alogin",(req,res)=>{
+    UserDB.findOne({email:req.body.email}).then((user)=>{
+        if(user)
+        {
+            if(user.admin)
+            {
+                if(user.password === req.body.password)
+                {
+                    res.render("cdashboard");
+                }
+                else{
+                    res.redirect("/");
+                }
+            }
+            else{
+                res.redirect("/");
+            }
+        }
+        else{
+            res.redirect("/");
+        }
+    })
+});
 
 app.get("/",(req,res)=>{
     res.render("index");
