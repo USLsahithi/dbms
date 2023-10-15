@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +28,8 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        th, td {
+        th,
+        td {
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid #ddd;
@@ -47,6 +49,7 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Cycle Information</h1>
     <table>
@@ -55,12 +58,15 @@
                 <th>Cycle ID</th>
                 <th>Cycle Name</th>
                 <th>Cycle Color</th>
-                <th>Model</th>
+                <th>Booked</th>
+                <th>Price</th>
                 <th>Availability</th>
+                <th>Purchase</th>
+                <th>Booked</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <!-- <tr>
                 <td>1</td>
                 <td>Mountain Bike</td>
                 <td>Blue</td>
@@ -73,9 +79,40 @@
                 <td>Red</td>
                 <td>2021</td>
                 <td>No</td>
-            </tr>
-            <!-- Add more rows with cycle information as needed -->
+            </tr> -->
+            <% for (let i=0; i < cycles.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= (i+1) %>
+                    </td>
+                    <td>
+                        <%= cycles[i].model %>
+                    </td>
+                    <td>
+                        <%= cycles[i].color %>
+                    </td>
+                    <td>
+                        <%= cycles[i].booked %>
+                    </td>
+                    <td>
+                        $ <%= cycles[i].price %>
+                    </td>
+                    <td>
+                        <%= cycles[i].availability %>
+                    </td>
+                    <td>
+                        <form action="/addToAccount" method="post">
+                            <button name="id" value="<%= cycles[i].id %>" type="submit">Buy</button>
+                        </form>
+                    </td>
+                    <td>
+                        <%= cycles[i].booked %>
+                    </td>
+                </tr>
+                <% } %>
+                    <!-- Add more rows with cycle information as needed -->
         </tbody>
     </table>
 </body>
+
 </html>

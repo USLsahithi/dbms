@@ -65,6 +65,7 @@ form button:hover {
 #signup-message a {
     color: #333;
     text-decoration: underline;
+    color: white;
 }
 
 /* styles.css */
@@ -86,7 +87,8 @@ form button:hover {
 /* Styles for the modal content */
 .modal-content {
     background-color: #fff;
-    margin: 5% auto; /* Adjust the percentage value to control the vertical position */
+    margin: 5% auto;
+    /* Adjust the percentage value to control the vertical position */
     padding: 20px;
     border-radius: 5px;
     max-width: 400px;

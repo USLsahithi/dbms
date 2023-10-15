@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body>
     <section id="dashboard-container">
         <div class="center-content">
-            <!-- Buttons -->
-            <button id="profile-button">Profile</button>
-            <button id="cycle-details-button">Cycle Details</button>
-            <button id="book-ride-button">Book for a Ride</button>
-            <button id="logout-button">Log Out</button>
+            <a href="/store">Store</a>
+            <a href="/">Log Out</a>
         </div>
     </section>
 
 </body>
+
 </html>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -26,23 +26,23 @@
         const cycleDetailsButton = document.getElementById("cycle-details-button");
         const bookRideButton = document.getElementById("book-ride-button");
         const logoutButton = document.getElementById("logout-button");
-    
+
         // Handle button clicks
         profileButton.addEventListener("click", function () {
             // Handle profile button click (e.g., redirect to profile page)
             alert("Profile button clicked");
         });
-    
+
         cycleDetailsButton.addEventListener("click", function () {
             // Handle cycle details button click (e.g., show cycle details)
             alert("Cycle Details button clicked");
         });
-    
+
         bookRideButton.addEventListener("click", function () {
             // Handle book for ride button click (e.g., open booking form)
             alert("Book for Ride button clicked");
         });
-    
+
         logoutButton.addEventListener("click", function () {
             // Handle logout button click (e.g., log the user out and redirect)
             alert("Log Out button clicked");
