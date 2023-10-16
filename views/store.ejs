@@ -51,6 +51,9 @@
 </head>
 
 <body>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
     <h1>Cycle Information</h1>
     <table>
         <thead>
@@ -58,28 +61,12 @@
                 <th>Cycle ID</th>
                 <th>Cycle Name</th>
                 <th>Cycle Color</th>
-                <th>Booked</th>
                 <th>Price</th>
-                <th>Availability</th>
                 <th>Purchase</th>
                 <th>Booked</th>
             </tr>
         </thead>
         <tbody>
-            <!-- <tr>
-                <td>1</td>
-                <td>Mountain Bike</td>
-                <td>Blue</td>
-                <td>2022</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Road Bike</td>
-                <td>Red</td>
-                <td>2021</td>
-                <td>No</td>
-            </tr> -->
             <% for (let i=0; i < cycles.length; i++) { %>
                 <tr>
                     <td>
@@ -92,13 +79,7 @@
                         <%= cycles[i].color %>
                     </td>
                     <td>
-                        <%= cycles[i].booked %>
-                    </td>
-                    <td>
                         $ <%= cycles[i].price %>
-                    </td>
-                    <td>
-                        <%= cycles[i].availability %>
                     </td>
                     <td>
                         <form action="/addToAccount" method="post">
